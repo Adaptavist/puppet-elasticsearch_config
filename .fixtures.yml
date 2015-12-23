@@ -1,0 +1,14 @@
+fixtures:
+  repositories:
+    oracle_java:
+      repo: 'ssh://git@stash.adaptavist.com:7999/pup/puppet-oracle_java.git'
+    packages_repo:
+      repo: "ssh://git@stash.adaptavist.com:7999/pup/puppet-packages_repos.git"
+    stdlib:
+      repo: "https://github.com/Adaptavist/puppetlabs-stdlib"
+    apt:
+      repo: "https://github.com/Adaptavist/puppetlabs-apt"
+    elasticsearch:
+      repo: 'https://github.com/Adaptavist/puppet-elasticsearch'
+  symlinks:
+    elasticsearch_config: "#{source_dir}"
