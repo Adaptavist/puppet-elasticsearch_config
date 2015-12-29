@@ -1,9 +1,9 @@
 fixtures:
   repositories:
     oracle_java:
-      repo: 'ssh://git@stash.adaptavist.com:7999/pup/puppet-oracle_java.git'
+      repo: 'https://github.com/Adaptavist/puppet-oracle_java.git'
     packages_repo:
-      repo: "ssh://git@stash.adaptavist.com:7999/pup/puppet-packages_repos.git"
+      repo: "https://github.com/Adaptavist/puppet-packages_repos.git"
     stdlib:
       repo: "https://github.com/Adaptavist/puppetlabs-stdlib"
     apt:
