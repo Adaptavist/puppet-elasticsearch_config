@@ -7,14 +7,14 @@ class elasticsearch_config(
         $status       = 'running',
         $es_version   = '1.4.2',
         $repo_version = '1.4',
-        $config = { 
+        $config = {
             'network' => '127.0.0.1'
             },
         $instances = {},
         $templates = {},
     ) {
 
-    if ($package_url and $package_url != "false") {
+    if ($package_url and $package_url != 'false') {
         $manage_repo = false
         $real_package_url = $package_url
     } else {
@@ -25,14 +25,14 @@ class elasticsearch_config(
     include oracle_java
 
     class {'elasticsearch' :
-        package_url   => $real_package_url,
-        version       => $es_version,
-        manage_repo   => $manage_repo,
-        repo_version  => $repo_version,
-        status        => $status,
-        config        => $config,
-        ensure        => $ensure,
-    } 
+        ensure       => $ensure,
+        package_url  => $real_package_url,
+        version      => $es_version,
+        manage_repo  => $manage_repo,
+        repo_version => $repo_version,
+        status       => $status,
+        config       => $config,
+    }
 
     create_resources('elasticsearch::template',  $templates)
     create_resources('elasticsearch::instance',  $instances)
