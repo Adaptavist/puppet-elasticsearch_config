@@ -12,6 +12,7 @@ class elasticsearch_config(
             },
         $instances = {},
         $templates = {},
+        $datadir = '/usr/share/elasticsearch/data',
     ) {
 
     if ($package_url and $package_url != 'false') {
@@ -32,6 +33,7 @@ class elasticsearch_config(
         repo_version => $repo_version,
         status       => $status,
         config       => $config,
+        datadir      => $datadir,
     }
 
     create_resources('elasticsearch::template',  $templates)
