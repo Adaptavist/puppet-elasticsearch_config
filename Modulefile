@@ -1,5 +1,5 @@
 name 'adaptavist-elasticsearch_config'
-version '0.1.4'
+version '0.1.5'
 source 'git@bitbucket.org:Adaptavist/puppet-elasticsearch_config.git'
 author 'adaptavist'
 summary 'elasticsearch_config Module' 
