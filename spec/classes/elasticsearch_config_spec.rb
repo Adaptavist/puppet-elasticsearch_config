@@ -7,9 +7,12 @@ describe 'elasticsearch_config', :type => 'class' do
         :host => Hash.new,
         :kernel => 'Linux',
         :osfamily => 'Debian',
-        :lsbdistid => 'Debian',
+        :lsbdistid => 'debian',
+        :lsbdistcodename => 'debian',
+        :lsbdistrelease => '14.04',
         :operatingsystem => 'Debian',
-        :operatingsystemmajrelease => '14'
+        :operatingsystemmajrelease => '14',
+        :puppetversion => Puppet.version
     }}
     
     it do
